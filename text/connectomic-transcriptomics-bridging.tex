@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{longtable}
+
+\title{ \textsc{Paper: Connectomics-transcriptomics bridging}}
+\author{Lena Morrill}
+\date{\today}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0in}
+
+\usepackage{subfig}
+\usepackage{multirow} %% for \rot
+\usepackage{floatrow}
+\usepackage{hyperref}
+\usepackage{array}
+
+ \usepackage[style=authoryear]{biblatex} %Imports biblatex package
+ \addbibresource{../bib.bib} %Import the bibliography file
+
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\begin{document}
+
+\maketitle
+
+%\tableofcontents
+
+\section{Matching of clusters from scRNA-Seq and NeuPrint}
+\begin{itemize}
+\item We want to find a matrix such that          
+\begin{enumerate}
+\item the entries are 0 or 1 (adjacency matrix)
+\item each row can have multiple entries of 1
+\item it cannot be that, if an element is in a row where there is more than one 1, it is also in a column where there is more than one 1 (i.e. there can be subsets in both directions, but only subsets, and no further splitting)
+\end{enumerate}
+\item Challenges
+\begin{enumerate}
+\item how to guarantee constraints
+\item how to sample adjacency matrix space
+\item how to evaluate goodness of match
+\item how to validate groups/annotation
+\end{enumerate}
+\item Optimal transport?
+\end{itemize}
+
+can this be done exhaustively?
+
+
+\end{document}
+
+
